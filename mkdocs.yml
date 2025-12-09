@@ -1,0 +1,76 @@
+site_name: 我的笔记本
+site_description: 个人学习笔记和技术文档
+site_author: Your Name
+
+# 使用Material主题
+theme:
+  name: material
+  language: zh
+  palette:
+    # 浅色模式
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    # 深色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  
+  features:
+    - navigation.tabs           # 顶部导航标签
+    - navigation.sections       # 导航分组
+    - navigation.expand         # 展开导航
+    - navigation.top            # 返回顶部按钮
+    - search.highlight          # 搜索高亮
+    - search.share              # 搜索分享
+    - content.code.copy         # 代码复制按钮
+    - content.code.annotate     # 代码注释
+
+# Markdown扩展
+markdown_extensions:
+  - admonition                  # 警告框
+  - pymdownx.details           # 可折叠详情
+  - pymdownx.superfences       # 代码块增强
+  - pymdownx.highlight:        # 代码高亮
+      anchor_linenums: true
+  - pymdownx.inlinehilite      # 行内代码高亮
+  - pymdownx.snippets          # 代码片段
+  - pymdownx.tabbed:           # 标签页
+      alternate_style: true
+  - pymdownx.tasklist:         # 任务列表
+      custom_checkbox: true
+  - pymdownx.emoji:            # 表情符号
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:       # 数学公式
+      generic: true
+  - attr_list                  # 属性列表
+  - md_in_html                 # HTML中的Markdown
+  - tables                     # 表格
+  - footnotes                  # 脚注
+  - toc:                       # 目录
+      permalink: true
+
+# 数学公式支持 (使用MathJax，比KaTeX更稳定)
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - js/mathjax-config.js
+
+# 自定义CSS
+extra_css:
+  - css/extra.css
+
+# 插件
+plugins:
+  - search:
+      lang: zh
+  - awesome-pages  # 自动生成导航
+  - minify:
+      minify_html: true

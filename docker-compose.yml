@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  notes:
+    build: .
+    container_name: my-notes
+    ports:
+      - "0.0.0.0:8000:8000"  # 绑定到所有网络接口
+    volumes:
+      - .:/docs
+    restart: unless-stopped
