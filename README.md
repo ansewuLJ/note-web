@@ -4,6 +4,11 @@
 
 ## 🚀 快速启动
 
+**首先进入项目目录：**
+```bash
+cd note-web
+```
+
 ### 方法一：Docker Compose（推荐）
 
 ```bash
@@ -44,9 +49,14 @@ docker run -d -p 8000:8000 -v ${PWD}:/docs --name my-notes my-notes
 
 ## 🛠️ 管理命令
 
+**注意：所有命令都需要在项目目录下执行**
+
 ```bash
 # 停止服务
 docker-compose down
+
+# 重启服务
+docker-compose restart
 
 # 重新构建
 docker-compose up --build
