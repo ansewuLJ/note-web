@@ -71,6 +71,5 @@ extra_css:
 plugins:
   - search:
       lang: zh
-  - awesome-pages  # 自动生成导航
   - minify:
       minify_html: true
